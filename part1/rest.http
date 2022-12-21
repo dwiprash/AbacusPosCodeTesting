@@ -1,0 +1,35 @@
+
+POST http://localhost:5174/api/simplecalculator/sum
+content-type: application/json
+
+[5,2,3,5,3]
+###
+
+POST http://localhost:5174/api/simplecalculator/subtract
+content-type: application/json
+
+[25,2,3,5,3]
+
+###
+POST http://localhost:5174/api/simplecalculator/multiply
+content-type: application/json
+
+[2,4,3,5]
+###
+POST http://localhost:5174/api/simplecalculator/divide
+content-type: application/json
+
+[16,4]
+###
+
+POST http://localhost:5174/api/simplecalculator/split-eq
+content-type: application/json
+
+[120, 4]
+###
+
+POST http://localhost:5174/api/simplecalculator/split
+content-type: application/json
+
+[140,45,35,20]
+###
