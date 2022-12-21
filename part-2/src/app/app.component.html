@@ -1,0 +1,28 @@
+<div class="container -fluid border -border-danger" style="width: 60%; margin: 20%; padding: 15px 15px;">
+<div class="row mb-3" >
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Select Operation: </label>
+  <div class="col-sm-4">
+    <select (ngModelChange)="onChanged($event)" [(ngModel)]="selectedOption" class="form-select form-select-sm" style="width: 200px;;"aria-label="Default select example">        
+      <option *ngFor="let item of options; index as i" [ngValue]="item">{{item.desc}}</option>
+      <button type="submit">Submit</button>
+  </select>    
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter input</label>
+  <div class="col-sm-4">
+    <input [(ngModel)]="userInput" class="form-control form-control-sm" id="colFormLabelSm" placeholder="{{selectedOption.exampleValue}}">
+  </div>
+</div>
+<div class="row mb-3">  
+  <div class="col-sm-4">
+    <button [disabled]="selectedOption.id == 0 || !userInput" (click)="onSubmit()"  class="btn btn-sm btn-primary">Submit</button>
+  </div>
+</div>
+<div class="row mb-3">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Result</label>
+  <div class="col-sm-4">
+    <input disabled value={{result}}  class="form-control form-control-sm" >
+  </div>
+</div>
+</div>
